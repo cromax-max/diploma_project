@@ -35,8 +35,8 @@ def test_claim_in_progress(auth):
         .click_change_status_button() \
         .click_take_to_work()
 
-    claim_label = claim_page.find_element(("id", "ru.iteco.fmhandroid:id/status_label_text_view"))
-    assert_that(claim_label.get_attribute("text"), equal_to_ignoring_case("In progress"))
+    assert_that(claim_page.claim_label.get_attribute("text"), equal_to_ignoring_case("In progress"))
+    assert_that(claim_page.claim_label.is_displayed())
 
 
 def test_filter_claims(auth):
@@ -51,8 +51,8 @@ def test_filter_claims(auth):
         .click_filtering_ok() \
         .open_first_claim()
 
-    claim_label = claim_page.find_element(("id", "ru.iteco.fmhandroid:id/status_label_text_view"))
-    assert_that(claim_label.get_attribute("text"), equal_to_ignoring_case("Executed"))
+    assert_that(claim_page.claim_label.get_attribute("text"), equal_to_ignoring_case("Executed"))
+    assert_that(claim_page.claim_label.is_displayed())
 
 
 def test_view_news(auth):
@@ -82,3 +82,4 @@ def test_add_news(auth):
 
     news = ctrl_panel.find_element(("xpath", f"//android.widget.TextView[@text='{news_title}']"))
     assert_that(news.get_attribute("text"), equal_to_ignoring_case(news_title))
+    assert_that(news.is_displayed())

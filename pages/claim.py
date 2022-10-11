@@ -50,6 +50,7 @@ class ClaimPage(BasePage):
     _executed_check_box = ("id", "ru.iteco.fmhandroid:id/item_filter_executed")
     _cancelled_check_box = ()
     _filtering_ok_button = ("id", "ru.iteco.fmhandroid:id/claim_list_filter_ok_material_button")
+    _claim_label = ("id", "ru.iteco.fmhandroid:id/status_label_text_view")
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -60,6 +61,10 @@ class ClaimPage(BasePage):
     @property
     def title(self):
         return self.find_element(ClaimPage._title)
+
+    @property
+    def claim_label(self):
+        return self.find_element(ClaimPage._claim_label)
 
     def set_claim_title(self, value):
         self.find_element(ClaimPage._claim_title).clear().send_keys(value)
