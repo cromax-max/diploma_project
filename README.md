@@ -1,4 +1,4 @@
-![visitor badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=cromax-max/diploma-project&color=55acb7&style=flat&logo=Github&text=Welcome!)
+//![visitor badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=cromax-max/diploma-project&color=55acb7&style=flat&logo=Github&text=Welcome!)
 ### Дипломное задание представляет собой автоматизацию тестирования мобильного приложения(Android)
 
 ### Задачи
